@@ -1,52 +1,68 @@
-import React from 'react';
-
+import React from "react";
+import Icon from "@mdi/react";
+import { mdiAccount } from "@mdi/js";
+import { mdiFileAccount } from "@mdi/js";
+import { mdiAccountGroup } from "@mdi/js";
+import { mdiVectorLink } from "@mdi/js";
+import { Link } from "react-router-dom";
 // Here we are using object destructuring assignment to pluck off our variables from the props object
 // We assign them to their own variable names
 function NavTabs({ currentPage, handlePageChange }) {
   return (
-    <ul className="nav nav-tabs">
-      <li className="nav-item">
-        <a
-          href="/About"
-          onClick={() => handlePageChange('About')}
-          // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
-        >
-          Home
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="/Projects"
-          onClick={() => handlePageChange('Projects')}
-          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}
-        >
-          About
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="/Resume"
-          onClick={() => handlePageChange('Resume')}
-          // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
-        >
-          Blog
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="/Contact"
-          onClick={() => handlePageChange('Contact')}
-          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
-        >
-          Contact
-        </a>
-      </li>
-    </ul>
+    <>
+      <header className=" w-screen bg-gray-700">
+        <nav >
+          <div className="container mx-auto py-4 flex justify-between items-center">
+            <h1 className="text-2xl font-bold text-gray-50">
+              Benjamin Sprenger
+            </h1>
+            <div className="flex space-x-10">
+              <div className="flex text-white items-center space-x-2">
+                <span>
+                  <Icon
+                    className="h-8 w-8 text-yellow-400"
+                    path={mdiAccount}
+                    size={1}
+                  />
+                </span>
+
+                <Link to="/" className="text-gray-50 hover:text-yellow-400">About</Link>
+              </div>
+              <div className="flex text-white items-center space-x-2">
+                <span>
+                  <Icon
+                    className="h-8 w-8 text-yellow-400"
+                    path={mdiVectorLink}
+                    size={1}
+                  />
+                </span>
+                <Link className="text-gray-50 hover:text-yellow-400" to="/projects">Projects</Link>
+              </div>
+              <div className="flex text-white items-center space-x-2">
+                <span>
+                  <Icon
+                    className="h-8 w-8 text-yellow-400"
+                    path={mdiAccountGroup}
+                    size={1}
+                  />
+                </span>
+                <Link className="text-gray-50 hover:text-yellow-400" to="/contact">Contact</Link>
+              </div>
+              <div className="flex text-white items-center space-x-2">
+                <span>
+                  <Icon
+                    className="h-8 w-8 text-yellow-400"
+                    path={mdiFileAccount}
+                    size={1}
+                  />
+                </span>
+                <Link className="text-gray-50 hover:text-yellow-400" to="/resume">Resume</Link>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </>
   );
 }
 

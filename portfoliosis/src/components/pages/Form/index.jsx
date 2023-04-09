@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import './style.css';
+import axios from 'axios';
 
 // Here we import a helper function that will check if the email is valid
-import { checkPassword, validateEmail } from '../../utils/helpers';
+import {  validateEmail} from '../../../utils/helpers';
 
 function Form() {
   // Create state variables for the fields in the form
   // We are also setting their initial values to an empty string
   const [email, setEmail] = useState('');
-  const [userName, setUserName] = useState('');
-  const [password, setPassword] = useState('');
+  const [Name, setName] = useState('');
+  const [Message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
@@ -22,9 +22,9 @@ function Form() {
     if (inputType === 'email') {
       setEmail(inputValue);
     } else if (inputType === 'userName') {
-      setUserName(inputValue);
+      setName(inputValue);
     } else {
-      setPassword(inputValue);
+      setMessage(inputValue);
     }
   };
 
@@ -33,52 +33,58 @@ function Form() {
     e.preventDefault();
 
     // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email) || !userName) {
-      setErrorMessage('Email or username is invalid');
+    if (!validateEmail(email) || !Name) {
+      setErrorMessage('Email or Name is invalid');
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
       // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
     }
-    if (!checkPassword(password)) {
+    if (!Message) {
       setErrorMessage(
-        `Choose a more secure password for the account: ${userName}`
+        `Please enter a Message!`
       );
       return;
     }
-    alert(`Hello ${userName}`);
+    axios.post('/send-email', {Name, email, Message}).then(response=> console.log(response)).catch(error => console.log(error));
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setUserName('');
-    setPassword('');
+    setName('');
+    setMessage('');
     setEmail('');
   };
 
   return (
-    <div>
-      <p>Hello {userName}</p>
+<div className='justify-center'>
+<div className="bg-blue mx-8 border-gray-950 w-full p-8 flex justify-center font-sans">
+<div className="rounded bg-gray-600 border-black w-64 p-2">
+  <h1 className='text-white'> Contact me</h1>
+
+    <div className="flex justify-between py-1">
       <form className="form">
-        <input
+        <input className="bg-white p-2 rounded mt-2 border-b border-grey cursor-pointer hover:bg-grey-lighter"
           value={email}
           name="email"
           onChange={handleInputChange}
           type="email"
-          placeholder="email"
+          placeholder="Email"
         />
-        <input
-          value={userName}
-          name="userName"
+        <input className="bg-white p-2 rounded mt-2 border-b border-grey cursor-pointer hover:bg-grey-lighter"
+          value={Name}
+          name="Name"
           onChange={handleInputChange}
           type="text"
-          placeholder="username"
+          placeholder="Name"
         />
-        <input
-          value={password}
-          name="password"
+        <input className="bg-white p-2 rounded mt-2 border-b border-grey cursor-pointer hover:bg-grey-lighter"
+          value={Message}
+          name="Message"
           onChange={handleInputChange}
-          type="password"
-          placeholder="Password"
+          type="text"
+          placeholder="Message"
         />
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
+        <div className='justify-center'>
+        <button className="bg-white p-2 rounded mt-2 border-b border-grey cursor-pointer hover:bg-grey-lighter" type="button" onClick={handleFormSubmit}>Submit</button>
+        </div>
       </form>
       {errorMessage && (
         <div>
@@ -86,6 +92,9 @@ function Form() {
         </div>
       )}
     </div>
+    </div>
+    </div>
+</div>
   );
 }
 
