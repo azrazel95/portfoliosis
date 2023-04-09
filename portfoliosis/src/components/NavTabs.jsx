@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 function NavTabs({ currentPage, handlePageChange }) {
   return (
     <>
-      <header>
-        <nav className=" w-screen bg-gray-700">
+      <header className=" w-screen bg-gray-700">
+        <nav >
           <div className="container mx-auto py-4 flex justify-between items-center">
             <h1 className="text-2xl font-bold text-gray-50">
               Benjamin Sprenger

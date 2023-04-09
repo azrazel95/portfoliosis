@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
 
 // Here we import a helper function that will check if the email is valid
-import {  validateEmail } from '../../../utils/helpers';
+import {  validateEmail} from '../../../utils/helpers';
 
 function Form() {
   // Create state variables for the fields in the form
@@ -45,20 +45,20 @@ function Form() {
       );
       return;
     }
-    alert(`Hello ${Name}`);
+    axios.post('/send-email', {Name, email, Message}).then(response=> console.log(response)).catch(error => console.log(error));
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setUserName('');
-    setPassword('');
+    setName('');
+    setMessage('');
     setEmail('');
   };
 
   return (
 <div className='justify-center'>
-     
-  <h1> Contact me</h1>
-<div className="bg-blue w-full p-8 flex justify-center font-sans">
-<div className="rounded bg-grey-light w-64 p-2">
+<div className="bg-blue mx-8 border-gray-950 w-full p-8 flex justify-center font-sans">
+<div className="rounded bg-gray-600 border-black w-64 p-2">
+  <h1 className='text-white'> Contact me</h1>
+
     <div className="flex justify-between py-1">
       <form className="form">
         <input className="bg-white p-2 rounded mt-2 border-b border-grey cursor-pointer hover:bg-grey-lighter"
@@ -76,11 +76,11 @@ function Form() {
           placeholder="Name"
         />
         <input className="bg-white p-2 rounded mt-2 border-b border-grey cursor-pointer hover:bg-grey-lighter"
-          value={password}
-          name="password"
+          value={Message}
+          name="Message"
           onChange={handleInputChange}
-          type="password"
-          placeholder="Password"
+          type="text"
+          placeholder="Message"
         />
         <div className='justify-center'>
         <button className="bg-white p-2 rounded mt-2 border-b border-grey cursor-pointer hover:bg-grey-lighter" type="button" onClick={handleFormSubmit}>Submit</button>

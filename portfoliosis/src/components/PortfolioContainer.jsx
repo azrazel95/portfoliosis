@@ -5,13 +5,14 @@ import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
-import Footer from "./Footer"
+import Footer from "./Footer";
+import backgroundVideo from '/assets/bg.mp4'
 
 const projects = [
   {
     id: 1,
     name: "bread and circus",
-    image: "./assets/breadandcircus.png",
+    image: "/assets/breadancircus.png",
     alt: "an image showing a blog style website",
     link: "https://breadandcircus.herokuapp.com/",
     description: "A blog-style website",
@@ -19,7 +20,7 @@ const projects = [
   {
     id: 2,
     name: "Notice Taker",
-    image: "./assets/noticed.png",
+    image: "/assets/noticed.png",
     alt: "an image showing a website for taking notes",
     link: "https://notice-taker.herokuapp.com/",
     description: "A note taking website for when you need a notepad on the go",
@@ -27,7 +28,7 @@ const projects = [
   {
     id: 3,
     name: "getOutdoorsFlorida",
-    image: "./assets/springhunters.png",
+    image: "/assets/springhunters.png",
     alt: "an image showing a website displaying a list of springs",
     link: "https://springhunters1.herokuapp.com/",
     description: "A website aiming to make it easier to find springs near you!",
@@ -35,7 +36,7 @@ const projects = [
   {
     id: 4,
     name: "Cloudy Prophecies",
-    image: "./assets/cloudyprohpecies.png",
+    image: "/assets/cloudyprohpecies.png",
     alt: "A website displaying the weather in a city that has been searched for",
     link: "https://azrazel95.github.io/cloudyprophecies/",
     description:
@@ -44,7 +45,7 @@ const projects = [
   {
     id: 5,
     name: "employee management",
-    image: "./assets/manyportfolios.png",
+    image: "/assets/manyportfolios.png",
     alt: "a website showing the result of said CLI input rendered onto a website using cards",
     link: "https://github.com/azrazel95/manyportfolios",
     description:
@@ -58,11 +59,10 @@ export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState("About");
   return (
     <div>
-      {/* <Header /> */}
-      {/* We are passing the currentPage from state and the function to update it */}
+      {/* <video  autoPlay loop muted id='video'><source className="blur-lg" src={backgroundVideo} type='video/mp4'/></video> */}
       
       <BrowserRouter>
-        <div>
+        <div >
           <NavTabs />
           <Routes>
           {/* <Switch> */}
@@ -70,7 +70,7 @@ export default function PortfolioContainer() {
             <Route path="/contact" element={<Contact />} />
             <Route
               path="/projects"
-              render={(props) => <Projects {...props} projects={projects} />}
+              element={<Projects projects={projects} />}
             />
             <Route path="/resume" element={<Resume />} />
           {/* </Switch> */}

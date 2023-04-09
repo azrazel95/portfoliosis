@@ -1,7 +1,25 @@
 body {
-  background-color: #aa968a;
+  background-image: url("assets/desert.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
+/* #video{
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+} */
 span {
   color: white;
+}
+
+.image-wrapper {
+  background-size: cover;
+  background-position: center;
+  height: 0;
+  padding-bottom: 56.25%;
+  transition: all 0.2s ease;
+}
+
+.image-wrapper:hover {
+  height: 200px; /* or whatever height you want the image to be */
 }

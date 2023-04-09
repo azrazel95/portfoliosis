@@ -10,13 +10,6 @@ import PortfolioContainer from "./components/PortfolioContainer";
 function App() {
   return (
     <div className="App">
-      {/* <Header />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Navigation />} />
-        </Routes>
-      </Router>
-      <Footer class="m-0" /> */}
       <PortfolioContainer />
     </div>
   );
