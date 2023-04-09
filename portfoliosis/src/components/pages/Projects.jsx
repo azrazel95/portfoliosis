@@ -1,10 +1,10 @@
 import React from "react";
 
 const Project = (props) => {
-  const { name, image, alt, link, description } = props;
+  
   return (
     <>
-      {/* component */}
+      
       <h3 className="text-2xl text-gray-700 font-bold mb-6 ml-3">Projects</h3>
       <ol>
         {props.projects.map(project => (
