@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavTabs from "./NavTabs";
 import Projects from "./pages/Projects";
@@ -6,13 +6,13 @@ import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import Footer from "./Footer";
-import backgroundVideo from '/assets/bg.mp4'
+// import backgroundVideo from '/assets/bg.mp4'
 
 const projects = [
   {
     id: 1,
-    name: "bread and circus",
-    image: "/assets/breadancircus.png",
+    name: "Bread and Circus",
+    image: "/assets/images/breadancircus.png",
     alt: "an image showing a blog style website",
     link: "https://breadandcircus.herokuapp.com/",
     description: "A blog-style website",
@@ -20,15 +20,15 @@ const projects = [
   {
     id: 2,
     name: "Notice Taker",
-    image: "/assets/noticed.png",
+    image: "/assets/images/noticed.png",
     alt: "an image showing a website for taking notes",
     link: "https://notice-taker.herokuapp.com/",
     description: "A note taking website for when you need a notepad on the go",
   },
   {
     id: 3,
-    name: "getOutdoorsFlorida",
-    image: "/assets/springhunters.png",
+    name: "GetOutdoorsFlorida",
+    image: "/assets/images/springhunters.png",
     alt: "an image showing a website displaying a list of springs",
     link: "https://springhunters1.herokuapp.com/",
     description: "A website aiming to make it easier to find springs near you!",
@@ -36,7 +36,7 @@ const projects = [
   {
     id: 4,
     name: "Cloudy Prophecies",
-    image: "/assets/cloudyprohpecies.png",
+    image: "/assets/images/cloudyprohpecies.png",
     alt: "A website displaying the weather in a city that has been searched for",
     link: "https://azrazel95.github.io/cloudyprophecies/",
     description:
@@ -44,8 +44,8 @@ const projects = [
   },
   {
     id: 5,
-    name: "employee management",
-    image: "/assets/manyportfolios.png",
+    name: "Employee Management System",
+    image: "/assets/images/manyportfolios.png",
     alt: "a website showing the result of said CLI input rendered onto a website using cards",
     link: "https://github.com/azrazel95/manyportfolios",
     description:
@@ -55,8 +55,7 @@ const projects = [
 export default function PortfolioContainer() {
  
 
-  const handlePageChange = (page) => setCurrentPage(page);
-  const [currentPage, setCurrentPage] = useState("About");
+  
   return (
     <div>
       {/* <video  autoPlay loop muted id='video'><source className="blur-lg" src={backgroundVideo} type='video/mp4'/></video> */}
