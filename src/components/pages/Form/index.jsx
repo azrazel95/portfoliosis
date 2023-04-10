@@ -21,7 +21,7 @@ function Form() {
     // Based on the input type, we set the state of either email, username, and password
     if (inputType === 'email') {
       setEmail(inputValue);
-    } else if (inputType === 'userName') {
+    } else if (inputType === 'Name') {
       setName(inputValue);
     } else {
       setMessage(inputValue);
@@ -45,7 +45,6 @@ function Form() {
       );
       return;
     }
-    axios.post('/send-email', {Name, email, Message}).then(response=> console.log(response)).catch(error => console.log(error));
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setName('');
@@ -79,11 +78,12 @@ function Form() {
           value={Message}
           name="Message"
           onChange={handleInputChange}
-          type="text"
+          type="Message"
           placeholder="Message"
         />
         <div className='justify-center'>
-        <button className="bg-white p-2 rounded mt-2 border-b border-grey cursor-pointer hover:bg-grey-lighter" type="button" onClick={handleFormSubmit}>Submit</button>
+          <a href="mailto:`beni.sprenger@hotmail.com`?subject='you've got mail!'&body{body}">
+        <button className="bg-white p-2 rounded mt-2 border-b border-grey cursor-pointer hover:bg-grey-lighter" type="button" onClick={handleFormSubmit}>Submit</button></a>
         </div>
       </form>
       {errorMessage && (

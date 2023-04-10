@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const About = () => {
   return (
     <>
-      <div className="max-w-md py-4 px-8 bg-gray-600 shadow-lg mx-175 my-50 rounded-lg ">
+      <div className="max-w-screen py-4 px-8 bg-gray-600 shadow-lg mx-10 my-50 rounded-lg ">
         <div className="flex justify-center md:justify-end -mt-16 ">
           <img
             className="w-20 h-20 object-cover rounded-full border-2 border-yellow-300"
