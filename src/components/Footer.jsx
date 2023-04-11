@@ -1,6 +1,7 @@
+// importing react
 import React from "react";
 
-
+// footer component with links to my socials
 const Footer = () => {
   return (
     <>

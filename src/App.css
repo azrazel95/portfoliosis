@@ -1,16 +1,14 @@
+/* importing my tailwind  */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* background image */
 body {
   background-image: url("../public/assets/images/desert.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-/* #video{
-  position: fixed;
-  z-index: -1;
-  width: 100%;
-} */
+
 span {
   color: white;
 }
