@@ -58,20 +58,20 @@ export default function PortfolioContainer() {
   
   return (
     <div>
-      {/* <video  autoPlay loop muted id='video'><source className="blur-lg" src={backgroundVideo} type='video/mp4'/></video> */}
+      
       
       <BrowserRouter>
         <div >
           <NavTabs />
           <Routes>
           {/* <Switch> */}
-            <Route exact path="/" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route exact path="" element={<About />} />
+            <Route path="contact" element={<Contact />} />
             <Route
-              path="/projects"
+              path="projects"
               element={<Projects projects={projects} />}
             />
-            <Route path="/resume" element={<Resume />} />
+            <Route path="resume" element={<Resume />} />
           {/* </Switch> */}
           </Routes>
         </div>

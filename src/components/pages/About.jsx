@@ -3,10 +3,11 @@ import React, { useState, useEffect } from "react";
 const About = () => {
   return (
     <>
-      <div className="md:max-w-1/3 sticky md:mb-65  py-4 px-10 bg-gray-600 shadow-lg md:ml-150 my-50 rounded-lg ">
+     <div className="lg:max-w-1/3 sticky lg:mb-65  py-4 px-10 bg-gray-600 shadow-lg lg:ml-150 my-50 rounded-lg ">
         <div className="flex justify-center md:justify-end -mt-16 ">
           <img
             className="w-20 h-20 object-cover rounded-full border-2 border-yellow-300"
+           
             src="https://media.licdn.com/dms/image/D4E03AQFMwrdAqDOmRw/profile-displayphoto-shrink_800_800/0/1678828464186?e=1686787200&v=beta&t=UUi7qbir5Al6laZV0G_CxkKfC2JehOIQoFPzW3QR7F0"
           />
         </div>
