@@ -1,13 +1,10 @@
+// importing react, reactstuff, and firebase components
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App.jsx";
-
-
-
-
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-
+// required for firebase
 const firebaseConfig = {
   apiKey: "AIzaSyBORzCWcpwFfokgbH1kxjPsxJAJaTL4eBU",
   authDomain: "website-380701.firebaseapp.com",
@@ -21,7 +18,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
+// react establishing itself
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />

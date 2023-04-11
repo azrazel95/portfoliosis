@@ -1,10 +1,14 @@
+
+// importing my tailwind and adding tailwind settings
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    // telling it what kinds of files to target
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     screens: {
+      // adding media queries
       'sm': [{'min': '0px', 'max': '640px'}],
       // => @media (min-width: 640px) { ... }
 

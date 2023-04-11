@@ -1,5 +1,6 @@
+// importing react
 import React from "react";
-
+// running projects through props to generate projects as i add them
 const Project = (props) => {
   
   return (
@@ -7,6 +8,7 @@ const Project = (props) => {
       <div >
       <h3 className="text-2xl  p-1 bg-gray-700  text-center rounded-lg m-5 text-white font-bold ">Projects</h3>
       <ol>
+        {/* mapping over projects */}
         {props.projects.map(project => (
           <li className="border-l-2 mx-10 sm:  border-yellow-300">
             <div className="md:flex flex-start">

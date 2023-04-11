@@ -1,5 +1,7 @@
+// importing react
 import React from "react";
 
+// resume component
 const Resume = () => {
   return (
     <>
@@ -54,6 +56,7 @@ const Resume = () => {
             <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-300">
               Resume
             </h3>
+            {/* cheeky download button */}
             <p className="text-base font-normal text-gray-300">
               For your convenience, feel free to download my Resume!
               <button className="bg-gray-300 ml-10 shadow-lg hover:bg-yellow-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">

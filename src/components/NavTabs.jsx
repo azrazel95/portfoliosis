@@ -1,3 +1,4 @@
+// importing react, icons and link from react router
 import React, { useState } from "react";
 import Icon from "@mdi/react";
 import { mdiAccount } from "@mdi/js";
@@ -8,7 +9,8 @@ import { Link } from "react-router-dom";
 // Here we are using object destructuring assignment to pluck off our variables from the props object
 // We assign them to their own variable names
 function NavTabs() {
-  const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
+  // using usestate to declare navopen as false
+  const [isNavOpen, setIsNavOpen] = useState(false); 
   return (
     <>
       <header className="sm:w-auto md:w-full bg-gray-700">
@@ -17,6 +19,7 @@ function NavTabs() {
             <h1 className="md:text-2xl sm:text-lg m-2 font-bold text-gray-50">
               Benjamin Sprenger
             </h1>
+            {/* hamburger icon on mobile */}
             <section className="MOBILE-MENU flex lg:hidden">
             <div
             className="HAMBURGER-ICON ml-64 space-y-2"
@@ -26,11 +29,13 @@ function NavTabs() {
             <span className="block h-0.5 w-8 animate-pulse bg-gray-400"></span>
             <span className="block h-0.5 w-8 animate-pulse bg-gray-400"></span>
           </div>
+          {/* checking usestate */}
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
             <div
               className="CROSS-ICON  absolute top-0 right-0 px-8 py-8"
               onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
             >
+              {/* cheeky svg */}
               <svg
                 className="h-8 w-8 text-gray-600"
                 viewBox="0 0 24 24"
@@ -44,6 +49,7 @@ function NavTabs() {
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </div>
+            {/* open mobile menu */}
             <ul className="MENU-LINK-MOBILE-OPEN sticky flex bg-inherit flex-col items-center justify-between min-h-[250px]">
               <li className="border-b border-gray-400 my-8 uppercase">
                 <a href="/">About</a>
@@ -60,6 +66,7 @@ function NavTabs() {
             </ul>
           </div>
         </section>
+        {/* desktop nav */}
         <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
         <div className=" md:text-lg sm:text-sm flex">
               <div className="flex text-white items-center ">
@@ -105,6 +112,7 @@ function NavTabs() {
               </div>
             </div>
         </ul>
+        {/* inline style because i havent had time to change it and the project is already late */}
         <style>{`
       .hideMenuNav {
         display: none;

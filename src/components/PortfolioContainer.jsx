@@ -1,3 +1,4 @@
+// importing react and browserrouter, as well as our components
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavTabs from "./NavTabs.jsx";
@@ -6,8 +7,7 @@ import About from "./pages/About.jsx";
 import Resume from "./pages/Resume.jsx";
 import Contact from "./pages/Contact.jsx";
 import Footer from "./Footer.jsx";
-// import backgroundVideo from '/assets/bg.mp4'
-
+// setting up props projects
 const projects = [
   {
     id: 1,
@@ -52,27 +52,19 @@ const projects = [
       "A CMS style employee management system using CLI questions to create a user friendly website displaying information about said employees",
   },
 ];
+// application component using browserrouter, inserting navtabs and linking to its associated pages, telling it what to render on corresponding link
 export default function PortfolioContainer() {
- 
-
-  
   return (
     <div>
-      
-      
       <BrowserRouter>
-        <div >
+        <div>
           <NavTabs />
           <Routes>
-          {/* <Switch> */}
             <Route exact path="" element={<About />} />
             <Route path="contact" element={<Contact />} />
-            <Route
-              path="projects"
-              element={<Projects projects={projects} />}
-            />
+            {/* rendering projects as projects */}
+            <Route path="projects" element={<Projects projects={projects} />} />
             <Route path="resume" element={<Resume />} />
-          {/* </Switch> */}
           </Routes>
         </div>
       </BrowserRouter>
