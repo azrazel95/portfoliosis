@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+
 
 // Here we import a helper function that will check if the email is valid
 import {  validateEmail} from '../../../utils/helpers';
@@ -57,7 +57,7 @@ function Form() {
 
   return (
 <div className='justify-center'>
-<div className="bg-blue  md:mb-110 mb-102 border-gray-950 w-full p-8 flex justify-center font-sans">
+<div className="bg-blue  lg:mb-96 lg:my-24 sm:my-32 sm:mb-40 border-gray-950 w-full p-8 flex justify-center font-sans">
 <div className="rounded bg-gray-600 border-black w-64 p-2">
   <h1 className='text-white'> Contact me</h1>
 

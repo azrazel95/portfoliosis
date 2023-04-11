@@ -1,11 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./index.html",
-    "./src/pages/home.jsx",
-    "./src/pages/sites.jsx",
-    "./src/app.jsx",
-    "./src/main.jsx",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     screens: {
@@ -28,4 +24,4 @@ export default {
     extend: {},
   },
   plugins: [],
-};
+}

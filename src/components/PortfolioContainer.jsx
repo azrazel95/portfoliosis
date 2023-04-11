@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NavTabs from "./NavTabs";
-import Projects from "./pages/Projects";
-import About from "./pages/About";
-import Resume from "./pages/Resume";
-import Contact from "./pages/Contact";
-import Footer from "./Footer";
+import NavTabs from "./NavTabs.jsx";
+import Projects from "./pages/Projects.jsx";
+import About from "./pages/About.jsx";
+import Resume from "./pages/Resume.jsx";
+import Contact from "./pages/Contact.jsx";
+import Footer from "./Footer.jsx";
 // import backgroundVideo from '/assets/bg.mp4'
 
 const projects = [
