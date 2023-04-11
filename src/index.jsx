@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import "./index.css";
-import "virtual:windi.css";
+import App from "./App.jsx";
+
+
 
 
 import { initializeApp } from "firebase/app";

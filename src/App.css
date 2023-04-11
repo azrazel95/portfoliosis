@@ -1,5 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
-  background-image: url("assets/images/desert.jpg");
+  background-image: url("../public/assets/images/desert.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -22,4 +25,8 @@ span {
 
 .image-wrapper:hover {
   height: 200px; /* or whatever height you want the image to be */
+}
+.card{
+  margin-left: 37%;
+  margin-bottom: 13.9rem;
 }
