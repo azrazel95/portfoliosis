@@ -1,6 +1,6 @@
 // importing react
 import React, { useState } from 'react';
-
+import axios from 'axios';
 
 // Here we import a helper function that will check if the email is valid
 import {  validateEmail} from '../../../utils/helpers';
@@ -49,7 +49,13 @@ function Form() {
       );
       return;
     }
-
+    axios
+    .post("https://getform.io/f/db860c47-3de8-467c-8d5f-4f88e73109bf", {
+        message: `${Message}`,
+    }, 
+    { headers: {'Accept': 'application/json'}})
+    .then(response => console.log(response))
+    .catch(error => console.log(error))
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setName('');
     setMessage('');
