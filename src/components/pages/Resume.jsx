@@ -47,7 +47,7 @@ const Resume = () => {
               JQuery: I have hands on experience with JQuery, and used it briefly for a few projects at the beginning of my programming journey.
             </p><br></br>
             <p className="text-base font-normal text-gray-300">
-              HTML, CSS and they're frameworks:
+              HTML, CSS and their frameworks:
               I have enjoyed leveraging bootstrap and tailwinds to quickly create scalable shops and contemporary websites.
             </p>
           </li>
