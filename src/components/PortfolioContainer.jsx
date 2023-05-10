@@ -11,6 +11,14 @@ import Footer from "./Footer.jsx";
 const projects = [
   {
     id: 1,
+    name: "GetOutdoorsFlorida",
+    image: "/assets/images/springhunters.png",
+    alt: "an image showing a website displaying a list of springs",
+    link: "https://getoutdoorsfla.com/",
+    description: "A Grassroots, Community driven Location aggregator",
+  },
+  {
+    id: 2,
     name: "Bread and Circus",
     image: "/assets/images/breadancircus.png",
     alt: "an image showing a blog style website",
@@ -18,20 +26,12 @@ const projects = [
     description: "A blog-style website",
   },
   {
-    id: 2,
+    id: 3,
     name: "Notice Taker",
     image: "/assets/images/noticed.png",
     alt: "an image showing a website for taking notes",
     link: "https://notice-taker.herokuapp.com/",
     description: "A note taking website for when you need a notepad on the go",
-  },
-  {
-    id: 3,
-    name: "GetOutdoorsFlorida",
-    image: "/assets/images/springhunters.png",
-    alt: "an image showing a website displaying a list of springs",
-    link: "https://springhunters1.herokuapp.com/",
-    description: "A website aiming to make it easier to find springs near you!",
   },
   {
     id: 4,
