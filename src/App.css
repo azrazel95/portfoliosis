@@ -28,3 +28,8 @@ span {
   margin-left: 37%;
   margin-bottom: 13.9rem;
 }
+.projectcontainer {
+  display: flex;
+  justify-content:space-between;
+  margin-top: 1rem;
+}

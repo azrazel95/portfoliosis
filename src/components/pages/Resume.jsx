@@ -61,7 +61,7 @@ const Resume = () => {
               For your convenience, feel free to download my Resume!
               <button className="bg-gray-300 ml-10 shadow-lg hover:bg-yellow-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
   <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
-  <a href="./assets/document/BenjaminSprenger.pdf" download> Download</a>
+  <a href="./assets/document/BenjaminSprengerCV.pdf" download> Download</a>
 </button>
             </p>
             </li>
