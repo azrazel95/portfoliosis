@@ -8,8 +8,8 @@ const Resume = () => {
       <div className="max-w-2xl mx-auto">
         <ol className="relative border-l rounded-lg my-10 p-3 bg-gray-600 border-gray-700">
           <li className="m-10 ml-4">
-            <div className="absolute w-3 h-3  rounded-full -left-1.5 border border-gray-900 bg-gray-700"></div>
-            <time className="mb-1 text-sm font-normal leading-none text-gray-500"></time>
+            <div className="absolute bulb w-3 h-3  rounded-full -left-1.5 border border-gray-900 bg-gray-700"></div>
+            
             <h3 className="text-lg font-semibold text-white">
               Introduction:
             </h3>
@@ -23,7 +23,7 @@ const Resume = () => {
             </p>
           </li>
           <li className="mb-10 ml-4">
-            <div className="absolute w-3 h-3  rounded-full -left-1.5 border border-gray-900 bg-gray-700"></div>
+            <div className="absolute w-3 h-3 bulb rounded-full -left-1.5 border border-gray-900 bg-gray-700"></div>
 
             <h3 className="text-lg font-semibold text-white">
               Programming Competencies:
@@ -52,7 +52,7 @@ const Resume = () => {
             </p>
           </li>
           <li className="ml-4">
-            <div className="absolute w-3 h-3  rounded-full -left-1.5 border border-gray-900 bg-gray-700"></div>
+            <div className="absolute w-3 h-3 bulb rounded-full -left-1.5 border border-gray-900 bg-gray-700"></div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-300">
               Resume
             </h3>

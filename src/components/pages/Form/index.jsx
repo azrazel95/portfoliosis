@@ -51,7 +51,9 @@ function Form() {
     }
     axios
     .post("https://getform.io/f/db860c47-3de8-467c-8d5f-4f88e73109bf", {
-        message: `${Message}`,
+      message: `Message:${Message}
+      name:${Name}
+      email:${email}`,
     }, 
     { headers: {'Accept': 'application/json'}})
     .then(response => console.log(response))
