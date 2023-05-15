@@ -11,7 +11,7 @@ const Project = (props) => {
         <ol>
           {/* mapping over projects */}
           {props.projects.map((project) => (
-            <li className="border-l-2 mx-10 sm:  border-yellow-300">
+            <li className="border-l-2 mx-10  sm:bulb border-yellow-300">
               <div className="md:flex flex-start">
                 <div className="block p-6 rounded-lg  bg-gray-700 ml-6 mb-10">
                   <div className="flex justify-between mb-4">
@@ -19,7 +19,7 @@ const Project = (props) => {
                       {project.name}
                     </a>
                   </div>
-                  <img src={project.image}></img>
+                  <img className="imageg" src={project.image}></img>
                   <div className="projectcontainer">
                     <p className="text-white mb-6">{project.description}</p>
                     <a href={project.link}>

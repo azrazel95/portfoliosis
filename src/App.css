@@ -49,17 +49,21 @@ span {
 
 .bg-gray-700 {
   flex: 1;
-  padding: 1.5rem;
+  
+  
 }
-
 @media (max-width: 768px) {
   .md:flex {
     flex-direction: column;
   }
 }
 
-img {
+.imageg {
   /* add flex-grow */
   flex-grow: 1;
   width: 100%;
+}
+.bulb{
+  margin-left:1rem;
+  margin-top:.5rem;
 }
