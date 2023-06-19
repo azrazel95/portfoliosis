@@ -10,7 +10,7 @@ const About = () => {
           <img
             className="w-20 h-20 object-cover rounded-full border-2 border-yellow-300"
            
-            src="https://media.licdn.com/dms/image/D4E03AQFMwrdAqDOmRw/profile-displayphoto-shrink_800_800/0/1678828464186?e=1686787200&v=beta&t=UUi7qbir5Al6laZV0G_CxkKfC2JehOIQoFPzW3QR7F0"
+            src="/assets/images/profile.jpg"
             alt="an image of the portfolio creator"
           />
         </div>
